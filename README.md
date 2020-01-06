@@ -1,6 +1,6 @@
 # CHIP-9
 
-[![Build Status](https://travis-ci.com/Sebastian-0/CHIP-9.svg?branch=master)](https://travis-ci.org/Sebastian-0/CHIP-9)
+[![Build Status](https://travis-ci.com/Sebastian-0/CHIP-9.svg?branch=master)](https://travis-ci.com/Sebastian-0/CHIP-9)
 
 This is my emulator for the CHIP9 computer in the 2019 ed. of the X-MAS CTF. My focus was to write the emulator in a way
 that makes it both fast to implement but also fast to run. I achieved this by extensively using lookup-tables based on
