@@ -79,3 +79,6 @@ end:
     hcf
 ```
 Note that my compiler uses the prefix `jmpnear` instead of only `jmp` for near jumps.
+
+## License
+This code is shared under the MIT license, see LICENSE for details.
