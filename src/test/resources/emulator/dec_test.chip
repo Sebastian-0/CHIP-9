@@ -1,0 +1,50 @@
+
+# Test simple decs
+ldi A, 0
+ldi B, 1
+ldi C, 2
+ldi D, 3
+ldi E, 4
+ldi H, 5
+ldi L, 6
+
+dec A
+dec B
+dec C
+dec D
+dec E
+dec H
+dec L
+
+sout A
+sout B
+sout C
+sout D
+sout E
+sout H
+sout L
+
+ldx HL, 0x1010
+ldi (HL), 7
+dec (HL)
+
+sout (HL)
+
+# Test flags
+ldi A, 0
+ldi B, 128
+ldi C, 1
+
+# Carry and Negative flags
+dec A
+sout FLAGS
+
+# No flags
+dec B
+sout FLAGS
+
+# Half-Carry and Zero flags
+dec C
+sout FLAGS
+
+hcf

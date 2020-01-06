@@ -1,0 +1,31 @@
+# Test simple adds
+ldi A, 1
+ldx BC, 0xFFFF
+ldx DE, 0x7FFF
+ldx HL, 0xF
+
+# Carry, Half-Carry and Zero flag
+addx BC
+sout FLAGS
+
+# Half-Carry and Negative flag
+addx DE
+sout FLAGS
+
+# No flag
+addx HL
+sout FLAGS
+
+sout BC
+sout DE
+sout HL
+
+# Zero flag
+ldi A, 0
+ldx BC, 0
+addx BC
+
+sout FLAGS
+sout BC
+
+hcf

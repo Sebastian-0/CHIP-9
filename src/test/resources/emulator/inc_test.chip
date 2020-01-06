@@ -1,0 +1,55 @@
+
+# Test simple incs
+ldi A, 1
+ldi B, 1
+ldi C, 2
+ldi D, 3
+ldi E, 4
+ldi H, 5
+ldi L, 255
+
+inc A
+inc B
+inc C
+inc D
+inc E
+inc H
+inc L
+
+sout A
+sout B
+sout C
+sout D
+sout E
+sout H
+sout L
+
+ldx HL, 0x1010
+ldi (HL), 7
+inc (HL)
+
+sout (HL)
+
+# Test flags
+ldi A, 15
+ldi B, 255
+ldi C, 1
+ldi D, 253
+
+# Half-Carry
+inc A
+sout FLAGS
+
+# Carry, Half-Carry and Zero flags
+inc B
+sout FLAGS
+
+# No flags
+inc C
+sout FLAGS
+
+# Negative flag
+inc D
+sout FLAGS
+
+hcf

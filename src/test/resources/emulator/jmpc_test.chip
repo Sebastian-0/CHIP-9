@@ -1,0 +1,70 @@
+
+ldi A, 1
+ldi B, 2
+
+clrflag
+setflag Z, 1
+jmpnz l1
+sout A
+jmpz l1
+sout B
+
+l1:
+clrflag
+setflag Z, 0
+jmpz l2
+sout A
+jmpnz l2
+sout B
+
+l2:
+clrflag
+setflag N, 1
+jmpnn l3
+sout A
+jmpn l3
+sout B
+
+l3:
+clrflag
+setflag N, 0
+jmpn l4
+sout A
+jmpnn l4
+sout B
+
+l4:
+clrflag
+setflag H, 1
+jmpnh l5
+sout A
+jmph l5
+sout B
+
+l5:
+clrflag
+setflag H, 0
+jmph l6
+sout A
+jmpnh l6
+sout B
+
+l6:
+clrflag
+setflag C, 1
+jmpnc l7
+sout A
+jmpc l7
+sout B
+
+l7:
+clrflag
+setflag C, 0
+jmpn l8
+sout A
+jmpnn l8
+sout B
+
+l8:
+
+hcf

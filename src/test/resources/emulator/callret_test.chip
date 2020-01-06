@@ -1,0 +1,17 @@
+
+ldi A, 1
+ldi B, 2
+ldi C, 3
+
+sout A
+call func
+sout B
+jmp end
+
+func:
+inc C
+sout C
+ret
+
+end:
+hcf

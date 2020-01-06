@@ -1,0 +1,93 @@
+# Test simple xors
+ldi A, 5
+ldi B, 5
+ldi C, 5
+ldi D, 5
+ldi E, 5
+ldi H, 5
+ldi L, 5
+ldi (HL), 5
+
+# All are equal
+clrflag
+cmp A
+sout FLAGS
+clrflag
+cmp B
+sout FLAGS
+clrflag
+cmp C
+sout FLAGS
+clrflag
+cmp D
+sout FLAGS
+clrflag
+cmp E
+sout FLAGS
+clrflag
+cmp H
+sout FLAGS
+clrflag
+cmp L
+sout FLAGS
+clrflag
+cmp (HL)
+sout FLAGS
+
+# All are smaller
+ldi A, 6
+
+clrflag
+cmp A
+sout FLAGS
+clrflag
+cmp B
+sout FLAGS
+clrflag
+cmp C
+sout FLAGS
+clrflag
+cmp D
+sout FLAGS
+clrflag
+cmp E
+sout FLAGS
+clrflag
+cmp H
+sout FLAGS
+clrflag
+cmp L
+sout FLAGS
+clrflag
+cmp (HL)
+sout FLAGS
+
+# All are larger
+ldi A, 4
+
+clrflag
+cmp A
+sout FLAGS
+clrflag
+cmp B
+sout FLAGS
+clrflag
+cmp C
+sout FLAGS
+clrflag
+cmp D
+sout FLAGS
+clrflag
+cmp E
+sout FLAGS
+clrflag
+cmp H
+sout FLAGS
+clrflag
+cmp L
+sout FLAGS
+clrflag
+cmp (HL)
+sout FLAGS
+
+hcf

@@ -1,0 +1,18 @@
+
+ldi A, 1
+ldi B, 2
+
+jmpnear 0x01
+sout B
+sout A
+jmp l1
+
+sout A
+jmp end
+l1:
+jmpnear 0xFA
+
+sout B
+end:
+
+hcf

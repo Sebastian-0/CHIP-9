@@ -1,0 +1,71 @@
+
+ldi A, 1
+ldi B, 2
+
+clrflag
+setflag Z, 1
+jmpnearnz 0x1
+sout A
+jmpnearz 0x1
+sout B
+
+clrflag
+setflag Z, 0
+jmpnearz 0x1
+sout A
+jmpnearnz 0x1
+sout B
+
+clrflag
+setflag N, 1
+jmpnearnn 0x1
+sout A
+jmpnearn 0x1
+sout B
+
+clrflag
+setflag N, 0
+jmpnearn 0x1
+sout A
+jmpnearnn 0x1
+sout B
+
+clrflag
+setflag H, 1
+jmpnearnh 0x1
+sout A
+jmpnearh 0x1
+sout B
+
+clrflag
+setflag H, 0
+jmpnearh 0x1
+sout A
+jmpnearnh 0x1
+sout B
+
+clrflag
+setflag C, 1
+jmpnearnc 0x1
+sout A
+jmpnearc 0x1
+sout B
+
+clrflag
+setflag C, 0
+jmpnearn 0x1
+sout A
+jmpnearnn 0x1
+sout B
+
+# Test negative jump
+clrflag
+setflag C, 0
+jmp after
+sout A
+jmp end
+after:
+jmpnearnc 0xFA
+
+end:
+hcf

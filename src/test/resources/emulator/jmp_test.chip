@@ -1,0 +1,13 @@
+
+ldi A, 1
+ldi B, 2
+jmp 0x0008
+sout B
+sout A
+jmp label
+sout B
+
+label:
+sout A
+
+hcf

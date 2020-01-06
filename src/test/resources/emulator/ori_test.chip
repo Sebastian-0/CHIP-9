@@ -1,0 +1,19 @@
+
+ldi A, 0x0
+
+# Zero flag
+ori 0x0
+sout A
+sout FLAGS
+
+# No flag
+ori 0x7C
+sout A
+sout FLAGS
+
+# Negative flag
+ori 0x80
+sout A
+sout FLAGS
+
+hcf

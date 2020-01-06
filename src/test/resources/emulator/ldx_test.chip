@@ -1,0 +1,26 @@
+sout BC
+sout DE
+sout HL
+sout SP
+ldx bc, 1000
+ldx de, 1001
+ldx hl, 1002
+ldx sp, 1003
+sout BC
+sout DE
+sout HL
+sout SP
+ldx bc, 65535
+ldx de, 65535
+ldx hl, 65535
+ldx sp, 65535
+sout BC
+sout DE
+sout HL
+sout SP
+
+# Test register partitioning
+ldx bc, 0x0102
+sout B
+sout C
+hcf

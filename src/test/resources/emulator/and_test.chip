@@ -1,0 +1,50 @@
+# Test simple ands
+ldi A, 85
+ldi B, 170
+ldi C, 15
+ldi D, 240
+ldi E, 1
+ldi H, 5
+ldi L, 24
+
+and A
+and B
+and C
+and D
+and E
+and H
+and L
+
+sout A
+sout B
+sout C
+sout D
+sout E
+sout H
+sout L
+
+ldx HL, 0x1010
+ldi (HL), 7
+and (HL)
+
+sout (HL)
+
+# Test flags
+ldi A, 134
+ldi B, 1
+ldi C, 128
+ldi D, 2
+
+# Zero flag
+and B
+sout FLAGS
+
+# Negative flag
+and C
+sout FLAGS
+
+# No flags
+and D
+sout FLAGS
+
+hcf

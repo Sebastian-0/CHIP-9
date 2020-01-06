@@ -1,0 +1,15 @@
+
+ldx BC, 255
+ldx DE, 65535
+ldx HL, 10
+
+inx BC
+inx DE
+inx HL
+inx HL
+
+sout BC
+sout DE
+sout HL
+
+hcf

@@ -1,0 +1,47 @@
+# Single register push
+ldx SP, 0xFFFE
+ldi A, 1
+ldi B, 2
+ldi C, 3
+ldi D, 4
+ldi E, 5
+ldi H, 6
+ldi L, 7
+ldi (HL), 8
+push A
+push B
+push C
+push D
+push E
+push H
+push L
+push (HL)
+
+sout SP
+sout M 0xFFFE
+sout M 0xFFFC
+sout M 0xFFFA
+sout M 0xFFF8
+sout M 0xFFF6
+sout M 0xFFF4
+sout M 0xFFF2
+sout M 0xFFF0
+
+# Test two-register push
+ldx SP, 0xFFFE
+ldx BC, 0x0102
+ldx DE, 0x0304
+ldx HL, 0x0506
+push BC
+push DE
+push HL
+
+sout SP
+sout M 0xFFFF
+sout M 0xFFFE
+sout M 0xFFFD
+sout M 0xFFFC
+sout M 0xFFFB
+sout M 0xFFFA
+
+hcf

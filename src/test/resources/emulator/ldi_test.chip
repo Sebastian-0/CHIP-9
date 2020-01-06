@@ -1,0 +1,44 @@
+sout A
+sout B
+sout C
+sout D
+sout E
+sout H
+sout L
+ldi A, 100
+ldi B, 101
+ldi C, 102
+ldi D, 103
+ldi E, 104
+ldi H, 105
+ldi L, 106
+sout A
+sout B
+sout C
+sout D
+sout E
+sout H
+sout L
+ldi A, 255
+ldi B, 255
+ldi C, 255
+ldi D, 255
+ldi E, 255
+ldi H, 255
+ldi L, 255
+sout A
+sout B
+sout C
+sout D
+sout E
+sout H
+sout L
+
+# Test write to memory
+ldi H, 0xF
+ldi L, 0xA
+sout M 0xF0A
+ldi (HL), 10
+sout M 0xF0A
+
+hcf

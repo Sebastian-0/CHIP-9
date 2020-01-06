@@ -1,0 +1,51 @@
+# Test simple ors
+ldi A, 85
+ldi B, 170
+ldi C, 15
+ldi D, 240
+ldi E, 1
+ldi H, 13
+ldi L, 24
+
+or A
+or B
+or C
+or D
+or E
+or H
+or L
+
+sout A
+sout B
+sout C
+sout D
+sout E
+sout H
+sout L
+
+ldx HL, 0x1010
+ldi (HL), 7
+or (HL)
+
+sout (HL)
+
+# Test flags
+ldi A, 6
+ldi B, 3
+ldi C, 128
+ldi D, 0
+
+# No flags
+or B
+sout FLAGS
+
+# Negative flag
+or C
+sout FLAGS
+
+# Zero flag
+ldi A, 0
+or D
+sout FLAGS
+
+hcf

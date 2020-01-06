@@ -1,0 +1,197 @@
+## Single register mov ##
+# Test from A
+ldi A, 1
+
+mov A, A
+mov B, A
+mov C, A
+mov D, A
+mov E, A
+mov H, A
+mov L, A
+
+sout A
+sout B
+sout C
+sout D
+sout E
+sout H
+sout L
+
+ldx HL, 0x1010
+mov (HL), A
+sout M 0x1010
+
+# Test from B
+ldi B, 2
+
+mov A, B
+mov B, B
+mov C, B
+mov D, B
+mov E, B
+mov H, B
+mov L, B
+
+sout A
+sout B
+sout C
+sout D
+sout E
+sout H
+sout L
+
+ldx HL, 0x1010
+mov (HL), B
+sout M 0x1010
+
+# Test from C
+ldi C, 3
+
+mov A, C
+mov B, C
+mov C, C
+mov D, C
+mov E, C
+mov H, C
+mov L, C
+
+sout A
+sout B
+sout C
+sout D
+sout E
+sout H
+sout L
+
+ldx HL, 0x1010
+mov (HL), C
+sout M 0x1010
+
+# Test from D
+ldi D, 4
+
+mov A, D
+mov B, D
+mov C, D
+mov D, D
+mov E, D
+mov H, D
+mov L, D
+
+sout A
+sout B
+sout C
+sout D
+sout E
+sout H
+sout L
+
+ldx HL, 0x1010
+mov (HL), D
+sout M 0x1010
+
+# Test from E
+ldi E, 5
+
+mov A, E
+mov B, E
+mov C, E
+mov D, E
+mov E, E
+mov H, E
+mov L, E
+
+sout A
+sout B
+sout C
+sout D
+sout E
+sout H
+sout L
+
+ldx HL, 0x1010
+mov (HL), E
+sout M 0x1010
+
+# Test from H
+ldi H, 6
+
+mov A, H
+mov B, H
+mov C, H
+mov D, H
+mov E, H
+mov H, H
+mov L, H
+
+sout A
+sout B
+sout C
+sout D
+sout E
+sout H
+sout L
+
+# H is overwritten, half the address will be copied into (HL)
+ldx HL, 0x1010
+mov (HL), H
+sout M 0x1010
+
+# Test from L
+ldi L, 7
+
+mov A, L
+mov B, L
+mov C, L
+mov D, L
+mov E, L
+mov H, L
+mov L, L
+
+sout A
+sout B
+sout C
+sout D
+sout E
+sout H
+sout L
+
+# H is overwritten, half the address will be copied into (HL)
+ldx HL, 0x1010
+mov (HL), L
+sout M 0x1010
+
+# Test from (HL)
+ldx HL, 0x1010
+ldi (HL), 8
+
+mov A, (HL)
+mov B, (HL)
+mov C, (HL)
+mov D, (HL)
+mov E, (HL)
+mov H, (HL)
+
+sout A
+sout B
+sout C
+sout D
+sout E
+sout H
+
+ldx HL, 0x1010
+mov L, (HL)
+sout L
+
+## Two register mov ##
+ldx BC, 0x1234
+ldx DE, 0x5678
+
+mov HL,BC
+sout HL
+
+mov HL,DE
+sout HL
+
+hcf

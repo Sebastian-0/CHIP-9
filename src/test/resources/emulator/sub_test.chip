@@ -1,0 +1,63 @@
+
+# Test simple subs
+ldi A, 3
+ldi B, 1
+ldi C, 2
+ldi D, 3
+ldi E, 4
+ldi H, 5
+ldi L, 6
+
+sub B
+sub C
+sub D
+sub E
+sub H
+sub L
+sub A
+
+sout A
+sout B
+sout C
+sout D
+sout E
+sout H
+sout L
+
+ldi A, 3
+ldx HL, 0x1010
+ldi (HL), 7
+sub (HL)
+
+sout (HL)
+
+# Test flags
+ldi A, 10
+ldi B, 10
+ldi C, 1
+ldi D, 113
+ldi E, 0
+
+# Half-Carry and Zero flags
+sub B
+sout FLAGS
+
+# Carry and Negative flags
+sub C
+sout FLAGS
+
+# No flags
+sub D
+sout FLAGS
+
+# Carry and Negative flag
+sub E
+sout FLAGS
+
+# Carry and Zero flag (should carry really be set here?)
+ldi A, 0
+ldi B, 0
+sub B
+sout FLAGS
+
+hcf

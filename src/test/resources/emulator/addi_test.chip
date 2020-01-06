@@ -1,0 +1,26 @@
+ldi A, 0
+
+# Zero flag
+addi 0
+sout FLAGS
+
+# No flags
+addi 1
+sout FLAGS
+
+# Half-carry flag
+addi 15
+sout FLAGS
+
+# Negative flag
+addi 112
+sout FLAGS
+
+# Carry flag
+addi 255
+sout FLAGS
+
+# Total result
+sout A
+
+hcf

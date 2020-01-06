@@ -1,0 +1,51 @@
+# Test simple xors
+ldi A, 0b01010101
+ldi B, 0b01010010
+ldi C, 0b10010101
+ldi D, 0b11111111
+ldi E, 0b00000000
+ldi H, 0b11110000
+ldi L, 0b00001111
+
+xor B
+xor C
+xor D
+xor E
+xor H
+xor L
+xor A
+
+sout A
+sout B
+sout C
+sout D
+sout E
+sout H
+sout L
+
+ldi A, 0b01010101
+ldx HL, 0x1010
+ldi (HL), 0b10101010
+xor (HL)
+
+sout (HL)
+
+# Test flags
+ldi A, 0b01100110
+ldi B, 0b01100110
+ldi C, 0b11000001
+ldi D, 0b01111001
+
+# Zero flag
+xor B
+sout FLAGS
+
+# Negative flag
+xor C
+sout FLAGS
+
+# No flags
+xor D
+sout FLAGS
+
+hcf

@@ -1,0 +1,67 @@
+
+# Test simple adds
+ldi A, 1
+ldi B, 1
+ldi C, 2
+ldi D, 3
+ldi E, 4
+ldi H, 5
+ldi L, 6
+
+add A
+add B
+add C
+add D
+add E
+add H
+add L
+
+sout A
+sout B
+sout C
+sout D
+sout E
+sout H
+sout L
+
+ldx HL, 0x1010
+ldi (HL), 7
+add (HL)
+
+sout (HL)
+
+# Test flags
+ldi A, 15
+ldi B, 255
+ldi C, 1
+ldi D, 113
+ldi E, 0
+ldi H, 241
+
+# Half-Carry and Carry flags
+add B
+sout FLAGS
+
+# Half-Carry flag
+add C
+sout FLAGS
+
+# Half-Carry and Negative flag
+add D
+sout FLAGS
+
+# No flags
+add E
+sout FLAGS
+
+# Half-Carry, Carry and Zero flags
+add H
+sout FLAGS
+
+# Zero flag
+ldi A, 0
+ldi B, 0
+add B
+sout FLAGS
+
+hcf

@@ -1,0 +1,18 @@
+ldi A, 5
+
+# Equal
+clrflag
+cmpi 5
+sout FLAGS
+
+# Less
+clrflag
+cmpi 6
+sout FLAGS
+
+# Greater
+clrflag
+cmpi 4
+sout FLAGS
+
+hcf

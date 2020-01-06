@@ -1,0 +1,66 @@
+## Single register pop ##
+ldx SP, 0xFFFE
+
+# Push 1..8 to the stack
+ldi A, 1
+ldi B, 2
+ldi C, 3
+ldi D, 4
+ldi E, 5
+ldi H, 6
+ldi L, 7
+ldi (HL), 8
+push A
+push B
+push C
+push D
+push E
+push H
+push L
+push (HL)
+sout SP
+
+# Pop 8..2
+pop A
+pop B
+pop C
+pop D
+pop E
+pop H
+pop L
+pop (HL)
+
+sout SP
+sout A
+sout B
+sout C
+sout D
+sout E
+sout H
+sout L
+# Address in HL given that their values are correct
+sout M 0x0302
+
+## Two register pop ##
+ldx SP, 0xFFFE
+ldx BC, 0x0102
+ldx DE, 0x0304
+ldx HL, 0x0506
+push BC
+push DE
+push HL
+sout SP
+
+pop BC
+pop DE
+pop HL
+
+sout SP
+sout B
+sout C
+sout D
+sout E
+sout H
+sout L
+
+hcf

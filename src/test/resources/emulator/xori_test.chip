@@ -1,0 +1,18 @@
+ldi A, 0b01100110
+
+# Zero flag
+xori 0b01100110
+sout A
+sout FLAGS
+
+# Negative flag
+xori 0b10000001
+sout A
+sout FLAGS
+
+# No flags
+xori 0b10011001
+sout A
+sout FLAGS
+
+hcf

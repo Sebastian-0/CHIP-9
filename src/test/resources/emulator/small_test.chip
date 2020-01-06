@@ -1,0 +1,17 @@
+# Program to sum values from 1..10
+
+main:
+    ldi A, 10
+    call sum
+    sout B
+    jmp end
+
+sum:
+    ldi B, 0
+    add B
+    subi 1
+    jmpnearnz 0xFB
+    ret
+
+end:
+    hcf

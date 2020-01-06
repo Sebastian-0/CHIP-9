@@ -1,0 +1,19 @@
+ldi A, 0
+
+# Carry and Zero flags (should carry really be set here?)
+subi 0
+sout FLAGS
+sout A
+
+# Carry and Negative
+subi 1
+sout FLAGS
+sout A
+
+# Half-carry flag
+ldi A, 2
+subi 1
+sout FLAGS
+sout A
+
+hcf

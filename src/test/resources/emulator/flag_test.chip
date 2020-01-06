@@ -1,0 +1,40 @@
+
+clrflag
+sout FLAGS
+
+# Set all flags
+setflag Z, 1
+sout FLAGS
+
+setflag N, 1
+sout FLAGS
+
+setflag H, 1
+sout FLAGS
+
+setflag C, 1
+sout FLAGS
+
+# Clear all flags
+setflag Z, 0
+sout FLAGS
+
+setflag N, 0
+sout FLAGS
+
+setflag H, 0
+sout FLAGS
+
+setflag C, 0
+sout FLAGS
+
+# Test clrflags
+setflag Z, 1
+setflag N, 1
+setflag H, 1
+setflag C, 1
+
+clrflag
+sout FLAGS
+
+hcf

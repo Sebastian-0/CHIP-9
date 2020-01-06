@@ -1,0 +1,12 @@
+
+ldi A, 1
+ldi B, 2
+
+sout A
+nop
+nop
+inc B
+nop
+sout B
+nop
+hcf
