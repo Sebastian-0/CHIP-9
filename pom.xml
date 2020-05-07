@@ -9,6 +9,14 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
+        <!-- Sonar cloud settings -->
+        <sonar.projectKey>Sebastian-0_CHIP-9</sonar.projectKey>
+        <sonar.organization>sebastian-0</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <!--suppress UnresolvedMavenProperty -->
+        <sonar.login>${env.SONAR_TOKEN}</sonar.login>
+
+        <!-- Dependency properties -->
         <junit.jupiter.version>5.5.2</junit.jupiter.version>
     </properties>
 
