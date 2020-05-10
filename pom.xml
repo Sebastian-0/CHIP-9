@@ -18,6 +18,9 @@
 
         <!-- Dependency properties -->
         <junit.jupiter.version>5.5.2</junit.jupiter.version>
+
+        <!-- Other -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
