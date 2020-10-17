@@ -1,5 +1,5 @@
 # CHIP-9
-
+![Java CI](https://github.com/Sebastian-0/CHIP-9/workflows/Java%20CI/badge.svg)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Sebastian-0_CHIP-9&metric=alert_status)](https://sonarcloud.io/dashboard?id=Sebastian-0_CHIP-9)
 
 This is my emulator for the CHIP9 computer in the 2019 ed. of the X-MAS CTF. My focus was to write the emulator in a way
