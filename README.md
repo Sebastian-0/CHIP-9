@@ -1,6 +1,6 @@
 # CHIP-9
 
-[![Build Status](https://travis-ci.com/Sebastian-0/CHIP-9.svg?branch=master)](https://travis-ci.com/Sebastian-0/CHIP-9)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Sebastian-0_CHIP-9&metric=alert_status)](https://sonarcloud.io/dashboard?id=Sebastian-0_CHIP-9)
 
 This is my emulator for the CHIP9 computer in the 2019 ed. of the X-MAS CTF. My focus was to write the emulator in a way
 that makes it both fast to implement but also fast to run. I achieved this by extensively using lookup-tables based on
